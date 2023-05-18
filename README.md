@@ -1,7 +1,7 @@
 # RPSc
 Rock Paper Scissors
 Pseudo Code
-User input
+User input => Using promt function ?
     1 = rock
     2= paper
     3 = scissors
