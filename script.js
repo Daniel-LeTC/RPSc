@@ -23,14 +23,33 @@ function checkPlayerChoice () { //if you want to do this till the input conrrect
 
 function playRound (playerSelection, computerSelection) {
 
-    if (computerSelection == "rock") {
-        return "draw";
-    } else if (computerSelection == "paper") {
-        return "computer win";
-    } else {return "computer lose";}
+    switch (playerSelection) {
+        case "rock":
+            if (computerSelection == "rock") {
+                return "draw";
+            } else if (computerSelection == "paper") {
+                return "lose";
+            } else {return "win";}
+            break;
+        
+        case "paper":
+            if (computerSelection == "rock") {
+                return "win";
+            } else if (computerSelection == "paper") {
+                return "draw";
+            } else {return "lose";}
+            break;
+        
+        case "scissors":
+            if (computerSelection == "rock") {
+                return "lose";
+            } else if (computerSelection == "paper") {
+                return "win";
+            } else {return "draw";}
+            break;
 
 
-    
+    }
 };
 
 
