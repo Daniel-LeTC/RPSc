@@ -1,6 +1,6 @@
 const selections = ["rock" , "paper" , "scissors"];
 let computerSelection;
-let playerSelection;
+let playerSelection = window.prompt("Enter your choice?");
 
 function getComputerChoice () { //This is the function that will generate random computer selection for this game
 
@@ -8,24 +8,34 @@ return computerSelection = selections[Math.floor(Math.random()*selections.length
 
 };
 
-function getPlayerChoice () {
+function checkPlayerChoice (playerSelection) {
+
+    if (selections.includes(playerSelection)) {
+        return playerSelection;
+    } else playerSelection = window.prompt ("Choose again:");
 
 };
 
-console.log (getComputerChoice ());
+console.log (checkPlayerChoice(playerSelection));
+console.log ("computer chose ",getComputerChoice ());
 
-playerSelection = "rock";
+//playerSelection = window.prompt("Enter your choice?");
+
+
 
 function playRound (playerSelection, computerSelection) {
 
-    if (computerSelection = "rock") {
-        return "draw"
-    } else if (computerSelection = "paper") {
-        return "player win"
-    } else {return "lose"}
+    if (computerSelection == "rock") {
+        return "draw";
+    } else if (computerSelection == "paper") {
+        return "computer win";
+    } else {return "computer lose";}
+
+
     
 };
 
+playRound (playerSelection,computerSelection);
 
-console.log (playerSelection);
+//console.log ("Player chose: ",playerSelection);
 console.log (playRound(playerSelection,computerSelection));
