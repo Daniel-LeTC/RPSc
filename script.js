@@ -18,8 +18,7 @@ function checkPlayerChoice () {
 
 };
 
-console.log (checkPlayerChoice());
-console.log ("computer chose ",getComputerChoice ());
+
 
 
 function playRound (playerSelection, computerSelection) {
@@ -36,5 +35,6 @@ function playRound (playerSelection, computerSelection) {
 
 
 
-
+console.log (checkPlayerChoice());
+console.log ("computer chose ",getComputerChoice ());
 console.log (playRound(playerSelection,computerSelection));
