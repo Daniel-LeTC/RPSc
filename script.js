@@ -38,5 +38,5 @@ function playRound (playerSelection, computerSelection) {
 console.log (checkPlayerChoice());
 console.log ("computer chose ",getComputerChoice ());
 console.log (playRound(playerSelection,computerSelection));
-console.log ("write something")
+
 
