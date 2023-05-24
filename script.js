@@ -21,7 +21,7 @@ function checkPlayerChoice () { //if you want to do this till the input conrrect
 
 
 
-function playRound (playerSelection, computerSelection) {
+function playRound (playerSelection, computerSelection) { //A evaluation function to check who win a game round
 
     switch (playerSelection) {
         case "rock":
