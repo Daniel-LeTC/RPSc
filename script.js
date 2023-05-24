@@ -1,6 +1,8 @@
 const selections = ["rock" , "paper" , "scissors"];
 let computerSelection;
-let playerSelection = window.prompt("Enter your choice?");
+let playerSelection = window.prompt("Enter your choice?").toLowerCase();
+
+
 
 function getComputerChoice () { //This is the function that will generate random computer selection for this game
 
