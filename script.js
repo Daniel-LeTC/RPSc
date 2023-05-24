@@ -8,19 +8,16 @@ return computerSelection = selections[Math.floor(Math.random()*selections.length
 
 };
 
-function checkPlayerChoice (playerSelection) {
+function checkPlayerChoice () {
 
     if (selections.includes(playerSelection)) {
         return playerSelection;
-    } else playerSelection = window.prompt ("Choose again:");
+    } playerSelection = window.prompt ("Choose again:");
 
 };
 
-console.log (checkPlayerChoice(playerSelection));
+console.log (checkPlayerChoice());
 console.log ("computer chose ",getComputerChoice ());
-
-//playerSelection = window.prompt("Enter your choice?");
-
 
 
 function playRound (playerSelection, computerSelection) {
@@ -35,7 +32,7 @@ function playRound (playerSelection, computerSelection) {
     
 };
 
-playRound (playerSelection,computerSelection);
 
-//console.log ("Player chose: ",playerSelection);
+
+
 console.log (playRound(playerSelection,computerSelection));
