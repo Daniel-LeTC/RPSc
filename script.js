@@ -10,7 +10,7 @@ return computerSelection = selections[Math.floor(Math.random()*selections.length
 
 };
 
-function checkPlayerChoice () {
+function checkPlayerChoice () { //if you want to do this till the input conrrect, you should use loop
 
     if (selections.includes(playerSelection)) {
         return playerSelection;
@@ -38,3 +38,5 @@ function playRound (playerSelection, computerSelection) {
 console.log (checkPlayerChoice());
 console.log ("computer chose ",getComputerChoice ());
 console.log (playRound(playerSelection,computerSelection));
+console.log ("write something")
+
