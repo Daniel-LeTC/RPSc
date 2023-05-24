@@ -1,3 +1,5 @@
+//Declaration and assignment of constant and variables to use for this game
+
 const selections = ["rock" , "paper" , "scissors"];
 let computerSelection;
 let playerSelection = window.prompt("Enter your choice?").toLowerCase();
@@ -17,9 +19,6 @@ function checkPlayerChoice () { //if you want to do this till the input conrrect
     } playerSelection = window.prompt ("Choose again:");
 
 };
-
-
-
 
 function playRound (playerSelection, computerSelection) { //A evaluation function to check who win a game round
 
