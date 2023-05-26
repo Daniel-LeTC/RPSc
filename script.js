@@ -66,7 +66,7 @@ function game() { //This function works as a full game, get player choice, gener
     playRound();
     console.log("you chose: ",playerSelection);
     console.log("computer chose: ",computerSelection);
-    console.log ("Result: ", playRound(playerSelection,computerSelection));
+    console.log ("Result: ", playRound());
     console.log ("SESSION ENDS");
 };
 
