@@ -13,6 +13,7 @@ return computerSelection = selections[Math.floor(Math.random()*selections.length
 function getPlayerChoice () { //This is the function that will make user input selection for this game
     playerSelection = window.prompt("Enter your choice?").toLowerCase();
     
+    
 };
 
 /*
@@ -76,7 +77,7 @@ game ();
 game ();
 
 
-
+//Beside the call stacks order, function, property or command will execute from top to bottom. Review parameter in function, call stacks, how function in JS execute, return in function
 
 
 
