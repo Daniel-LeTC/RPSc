@@ -11,7 +11,7 @@ return computerSelection = selections[Math.floor(Math.random()*selections.length
 };
 
 function getPlayerChoice () { //This is the function that will make user input selection for this game
-    playerSelection = window.prompt("Enter your choice?").toLowerCase();
+    return playerSelection = window.prompt("Enter your choice?").toLowerCase();
     
     
 };
