@@ -25,7 +25,7 @@ function checkPlayerChoice () { //if you want to do this till the input conrrect
 
 };
 */
-function playRound (playerSelection, computerSelection) { //A evaluation function to check who win a game round
+function playRound () { //A evaluation function to check who win a game round
 
     switch (playerSelection) {
         case "rock":
@@ -63,7 +63,7 @@ function playRound (playerSelection, computerSelection) { //A evaluation functio
 function game() { //This function works as a full game, get player choice, generate computer choice, the evaluate who wins
     getPlayerChoice ();
     getComputerChoice();
-    playRound(playerSelection,computerSelection);
+    playRound();
     console.log("you chose: ",playerSelection);
     console.log("computer chose: ",computerSelection);
     console.log ("Result: ", playRound(playerSelection,computerSelection));
