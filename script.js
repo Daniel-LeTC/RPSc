@@ -2,9 +2,7 @@
 
 const selections = ["rock" , "paper" , "scissors"];
 let computerSelection;
-let playerSelection = window.prompt("Enter your choice?").toLowerCase();
-
-
+let playerSelection; 
 
 function getComputerChoice () { //This is the function that will generate random computer selection for this game
 
@@ -12,6 +10,12 @@ return computerSelection = selections[Math.floor(Math.random()*selections.length
 
 };
 
+function getPlayerChoice () { //This is the function that will make user input selection for this game
+    playerSelection = window.prompt("Enter your choice?").toLowerCase();
+    
+};
+
+/*
 function checkPlayerChoice () { //if you want to do this till the input conrrect, you should use loop
 
     if (selections.includes(playerSelection)) {
@@ -19,7 +23,7 @@ function checkPlayerChoice () { //if you want to do this till the input conrrect
     } playerSelection = window.prompt ("Choose again:");
 
 };
-
+*/
 function playRound (playerSelection, computerSelection) { //A evaluation function to check who win a game round
 
     switch (playerSelection) {
@@ -53,8 +57,26 @@ function playRound (playerSelection, computerSelection) { //A evaluation functio
 
 
 
-console.log (checkPlayerChoice());
-console.log ("computer chose ",getComputerChoice ());
-console.log (playRound(playerSelection,computerSelection));
+
+
+function game() { //This function works as a full game, get player choice, generate computer choice, the evaluate who wins
+    getPlayerChoice ();
+    getComputerChoice();
+    playRound(playerSelection,computerSelection);
+    console.log("you chose: ",playerSelection);
+    console.log("computer chose: ",computerSelection);
+    console.log ("Result: ", playRound(playerSelection,computerSelection));
+    console.log ("SESSION ENDS");
+};
+
+game ();
+game ();
+game ();
+game ();
+game ();
+
+
+
+
 
 
