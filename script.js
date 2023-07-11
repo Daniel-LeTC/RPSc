@@ -1,28 +1,47 @@
 //Declaration and assignment of constant and variables to use for this game
 
+let playerSelection;
+const rockbtn = document.querySelector('#rockbtn');
+rockbtn.onclick = () => playerSelection = "rock";
+
+
+
+const paperbtn = document.querySelector('#paperbtn');
+paperbtn.onclick = () => playerSelection = "paper";
+
+
+
+const scissorsbtn = document.querySelector('#scissorsbtn');
+scissorsbtn.onclick = () => playerSelection = "scissors";
+
+console.log(playerSelection);
+
 const selections = ["rock", "paper", "scissors"];
 let computerSelection = selections[Math.floor(Math.random() * selections.length)];
-let playerSelection = "";
 
-const playerRock = document.querySelector('#rockbtn');
-playerRock.addEventListener('click', () => {
+
+console.log(computerSelection);
+
+/*
+const rockbtn = document.querySelector('#rockbtn');
+rockbtn.addEventListener('click', () => {
     return playerSelection = "rock";
 
 });
-const playerPaper = document.querySelector('#paperbtn');
-playerPaper.addEventListener('click', () => {
+const paperbtn = document.querySelector('#paperbtn');
+paperbtn.addEventListener('click', () => {
     return playerSelection = "paper";
 
 });
 
-const playerScissors = document.querySelector('#scissorsbtn');
-playerScissors.addEventListener('click', () => {
+const scissorsbtn = document.querySelector('#scissorsbtn');
+scissorsbtn.addEventListener('click', () => {
     return playerSelection = "scissors";
 
 });
 
 console.log(playerSelection);
-
+*/
 
 
 
@@ -33,23 +52,27 @@ console.log(playerSelection);
 
 //};
 
-function getPlayerChoice() { //This is the function that will make user input selection for this game
-
-    return playerSelection;
 
 
-};
+
+//function getPlayerChoice() { //This is the function that will make user input selection for this game
+
+
+
+//};
 
 /*
-function checkPlayerChoice () { //if you want to do this till the input conrrect, you should use loop
+function checkPlayerChoice() { //if you want to do this till the input conrrect, you should use loop
 
     if (selections.includes(playerSelection)) {
         return playerSelection;
-    } playerSelection = window.prompt ("Choose again:");
+    } playerSelection = window.prompt("Choose again:");
 
 };
 */
-/*function playRound() { //A evaluation function to check who win a game round
+/*
+function playRound() { //A evaluation function to check who win a game round
+
 
 
     switch (playerSelection) {
@@ -87,7 +110,7 @@ function checkPlayerChoice () { //if you want to do this till the input conrrect
 
 function game() { //This function works as a full game, get player choice, generate computer choice, the evaluate who wins
     //getPlayerChoice();
-    getPlayerChoice(playerSelection);
+
     playRound();
     console.log("you chose: ", playerSelection);
     console.log("computer chose: ", computerSelection);
@@ -96,10 +119,7 @@ function game() { //This function works as a full game, get player choice, gener
 };
 
 game();
-game();
-game();
-game();
-game();
+
 
 
 //Beside the call stacks order, function, property or command will execute from top to bottom. Review parameter in function, call stacks, how function in JS execute, return in function
