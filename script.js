@@ -1,35 +1,42 @@
 //Declaration and assignment of constant and variables to use for this game
 
 const selections = ["rock", "paper", "scissors"];
-let computerSelection;
-let playerSelection;
+let computerSelection = selections[Math.floor(Math.random() * selections.length)];
+let playerSelection = "";
+
 const playerRock = document.querySelector('#rockbtn');
 playerRock.addEventListener('click', () => {
-    playerSelection = "rock";
-    return alert("ROCK");
-});
+    return playerSelection = "rock";
 
+});
 const playerPaper = document.querySelector('#paperbtn');
 playerPaper.addEventListener('click', () => {
-    playerSelection = "paper";
-    return alert("PAPER");
+    return playerSelection = "paper";
+
 });
 
 const playerScissors = document.querySelector('#scissorsbtn');
 playerScissors.addEventListener('click', () => {
-    playerSelection = "scissors";
-    return alert("SCISSORS");
+    return playerSelection = "scissors";
+
 });
 
+console.log(playerSelection);
 
-function getComputerChoice() { //This is the function that will generate random computer selection for this game
 
-    return computerSelection = selections[Math.floor(Math.random() * selections.length)];
 
-};
+
+
+//function getComputerChoice() { //This is the function that will generate random computer selection for this game
+
+// return computerSelection = selections[Math.floor(Math.random() * selections.length)];
+
+//};
 
 function getPlayerChoice() { //This is the function that will make user input selection for this game
-    //    return playerSelection = window.prompt("Enter your choice?").toLowerCase();
+
+    return playerSelection;
+
 
 };
 
@@ -42,7 +49,8 @@ function checkPlayerChoice () { //if you want to do this till the input conrrect
 
 };
 */
-function playRound() { //A evaluation function to check who win a game round
+/*function playRound() { //A evaluation function to check who win a game round
+
 
     switch (playerSelection) {
         case "rock":
@@ -78,8 +86,8 @@ function playRound() { //A evaluation function to check who win a game round
 
 
 function game() { //This function works as a full game, get player choice, generate computer choice, the evaluate who wins
-    getPlayerChoice();
-    getComputerChoice();
+    //getPlayerChoice();
+    getPlayerChoice(playerSelection);
     playRound();
     console.log("you chose: ", playerSelection);
     console.log("computer chose: ", computerSelection);
@@ -97,4 +105,4 @@ game();
 //Beside the call stacks order, function, property or command will execute from top to bottom. Review parameter in function, call stacks, how function in JS execute, return in function
 
 
-
+*/
