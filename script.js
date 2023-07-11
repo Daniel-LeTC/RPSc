@@ -3,6 +3,24 @@
 const selections = ["rock", "paper", "scissors"];
 let computerSelection;
 let playerSelection;
+const playerRock = document.querySelector('#rockbtn');
+playerRock.addEventListener('click', () => {
+    playerSelection = "rock";
+    return alert("ROCK");
+});
+
+const playerPaper = document.querySelector('#paperbtn');
+playerPaper.addEventListener('click', () => {
+    playerSelection = "paper";
+    return alert("PAPER");
+});
+
+const playerScissors = document.querySelector('#scissorsbtn');
+playerScissors.addEventListener('click', () => {
+    playerSelection = "scissors";
+    return alert("SCISSORS");
+});
+
 
 function getComputerChoice() { //This is the function that will generate random computer selection for this game
 
@@ -10,15 +28,10 @@ function getComputerChoice() { //This is the function that will generate random 
 
 };
 
-//function getPlayerChoice () { //This is the function that will make user input selection for this game
-//    return playerSelection = window.prompt("Enter your choice?").toLowerCase();
+function getPlayerChoice() { //This is the function that will make user input selection for this game
+    //    return playerSelection = window.prompt("Enter your choice?").toLowerCase();
 
-
-//};
-
-let playerRock = document.getElementById("rockbtn").click();
-let playerPaper = document.getElementById("paperbtn").click();
-let playerScissors = document.getElementById("scissorsbtn").click();
+};
 
 /*
 function checkPlayerChoice () { //if you want to do this till the input conrrect, you should use loop
